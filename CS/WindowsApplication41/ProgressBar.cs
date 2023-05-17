@@ -113,9 +113,9 @@ public class MyRepositoryItemProgressBar : RepositoryItem
         val = Math.Min(val, Maximum);
         return val;
     }
-    public override IVisualBrick GetBrick(PrintCellHelperInfo info)
+    public override VisualBrick GetBrick(PrintCellHelperInfo info)
     {
-        IProgressBarBrick brick = (IProgressBarBrick)base.GetBrick(info);
+        ProgressBarBrick brick = (ProgressBarBrick)base.GetBrick(info);
         brick.Position = ConvertValue(info.EditValue);
         return brick;
     }
